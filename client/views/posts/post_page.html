@@ -1,0 +1,14 @@
+<template name="postPage">
+    {{> postItem}}
+        <ul class="comments">
+        {{#each comments}}
+            {{> comment}}
+        {{/each}}
+        </ul>
+        {{#if currentUser}}
+            {{> commentSubmit}}
+        {{else}}
+            <p>Você deve estar logado para deixar um comentário.</p>
+        {{/if}}
+</template>
+
